@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
+
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -35,25 +39,7 @@
     </main>
   </div>
 
-  <script>
-    const root = document.documentElement;
-    const btn = document.getElementById('theme-toggle');
-    const label = btn.querySelector('.toggle-label');
-
-    function setTheme(theme) {
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      label.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  </script>
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  
 </body>
 </html>
