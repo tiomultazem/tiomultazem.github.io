@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-/* Reset style bawaan jekyll-theme-minimal yang bikin bentrok */
+/* Matikan layout default theme minimal yang bentrok */
 .wrapper,
 header,
 section,
@@ -11,6 +11,7 @@ footer {
   width: auto;
   float: none;
   position: static;
+  margin: 0;
 }
 
 header ul,
@@ -18,34 +19,68 @@ header li {
   display: initial;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
 :root {
-  --bg: #f6f7fb;
-  --card: #ffffff;
+  --bg: #f3f4f8;
+  --bg-accent: radial-gradient(circle at top left, rgba(99, 102, 241, 0.08), transparent 30%);
+  --card: rgba(255, 255, 255, 0.82);
+  --card-solid: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
   --heading: #111827;
-  --border: #e5e7eb;
+  --border: rgba(17, 24, 39, 0.08);
   --link: #2563eb;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 18px 40px rgba(15, 23, 42, 0.12);
 }
 
 :root[data-theme="dark"] {
-  --bg: #0b1220;
-  --card: #111827;
+  --bg: #0b1120;
+  --bg-accent: radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 28%);
+  --card: rgba(17, 24, 39, 0.78);
+  --card-solid: #111827;
   --text: #e5e7eb;
   --muted: #94a3b8;
   --heading: #f8fafc;
-  --border: #243041;
-  --link: #60a5fa;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --border: rgba(148, 163, 184, 0.15);
+  --link: #7cb3ff;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  --shadow-hover: 0 18px 44px rgba(0, 0, 0, 0.38);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    var(--bg-accent),
+    linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 92%, white 8%) 100%);
+  transition:
+    background-color 320ms ease,
+    color 320ms ease,
+    background 320ms ease;
+}
+
+body,
+.sidebar,
+.main-content section,
+.theme-toggle,
+.chip,
+a,
+h1,
+h2,
+h3,
+p {
+  transition:
+    background-color 320ms ease,
+    color 320ms ease,
+    border-color 320ms ease,
+    box-shadow 320ms ease,
+    transform 320ms ease,
+    opacity 320ms ease;
 }
 
 * {
@@ -72,46 +107,58 @@ a:hover {
 }
 
 .container {
-  width: min(1400px, 92%);
+  width: 75%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 48px 0;
+  padding: 56px 0 72px;
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
 
 .sidebar {
   position: sticky;
-  top: 32px;
+  top: 28px;
+  padding: 6px 4px;
 }
 
 .sidebar h1 {
-  margin: 0 0 12px;
-  font-size: 3rem;
-  line-height: 0.95;
+  margin: 0 0 14px;
+  font-size: 3.2rem;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
   color: var(--heading);
 }
 
 .tagline {
+  margin: 0 0 12px;
   font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--muted);
-  margin-bottom: 16px;
 }
 
 .bio {
-  color: var(--text);
-  margin-bottom: 24px;
+  margin: 0 0 22px;
+  font-size: 1.02rem;
+  line-height: 1.8;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 14px;
+  gap: 12px 16px;
 }
 
 .nav a {
+  color: var(--link);
   font-weight: 600;
+  opacity: 0.92;
+}
+
+.nav a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
 }
 
 .main-content {
@@ -123,11 +170,17 @@ a:hover {
 
 .main-content section {
   background: var(--card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 28px;
+  border-radius: 26px;
+  padding: 28px 30px;
   box-shadow: var(--shadow);
-  margin: 0;
+}
+
+.main-content section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .main-content section.full {
@@ -135,19 +188,24 @@ a:hover {
 }
 
 h2 {
-  margin-top: 0;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
+  font-size: 1.55rem;
   color: var(--heading);
-  font-size: 1.6rem;
 }
 
 h3 {
-  margin-bottom: 6px;
+  margin: 0 0 6px;
+  font-size: 1.08rem;
   color: var(--heading);
 }
 
+p {
+  margin-top: 0;
+  line-height: 1.8;
+}
+
 .item {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .item:last-child {
@@ -155,14 +213,14 @@ h3 {
 }
 
 .meta {
+  margin-bottom: 10px;
   color: var(--muted);
-  margin-top: 0;
 }
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
 .chips {
@@ -174,34 +232,55 @@ h3 {
 .chip {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: 9px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: transparent;
+  background: color-mix(in srgb, var(--card-solid) 86%, transparent 14%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 .theme-toggle {
   position: fixed;
   top: 22px;
   right: 22px;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
   border: 1px solid var(--border);
+  border-radius: 50%;
   background: var(--card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--text);
   box-shadow: var(--shadow);
   cursor: pointer;
   z-index: 999;
 }
 
+.theme-toggle:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 85%;
+  }
+}
+
 @media (max-width: 980px) {
   .container {
+    width: 95%;
     grid-template-columns: 1fr;
+    gap: 22px;
+    padding-top: 86px;
   }
 
   .sidebar {
     position: static;
+  }
+
+  .sidebar h1 {
+    font-size: 2.5rem;
   }
 
   .main-content {
@@ -211,8 +290,29 @@ h3 {
   .grid-2 {
     grid-template-columns: 1fr;
   }
+}
 
-  .sidebar h1 {
-    font-size: 2.2rem;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body,
+  .sidebar,
+  .main-content section,
+  .theme-toggle,
+  .chip,
+  a,
+  h1,
+  h2,
+  h3,
+  p {
+    transition: none;
+  }
+
+  .main-content section:hover,
+  .theme-toggle:hover,
+  .nav a:hover {
+    transform: none;
   }
 }
