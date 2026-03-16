@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-/* Matikan layout default theme minimal yang bentrok */
+/* Nonaktifkan layout bawaan jekyll-theme-minimal yang bentrok */
 .wrapper,
 header,
 section,
@@ -20,9 +20,10 @@ header li {
 }
 
 :root {
+  color-scheme: light;
   --bg: #f3f4f8;
   --bg-accent: radial-gradient(circle at top left, rgba(99, 102, 241, 0.08), transparent 30%);
-  --card: rgba(255, 255, 255, 0.82);
+  --card: rgba(255, 255, 255, 0.88);
   --card-solid: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
@@ -34,27 +35,32 @@ header li {
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #0b1120;
-  --bg-accent: radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 28%);
-  --card: rgba(17, 24, 39, 0.78);
-  --card-solid: #111827;
-  --text: #e5e7eb;
-  --muted: #94a3b8;
-  --heading: #f8fafc;
-  --border: rgba(148, 163, 184, 0.15);
-  --link: #7cb3ff;
-  --shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
-  --shadow-hover: 0 18px 44px rgba(0, 0, 0, 0.38);
+  --bg-accent: radial-gradient(circle at top left, rgba(96, 165, 250, 0.14), transparent 28%);
+  --card: rgba(28, 40, 63, 0.92);
+  --card-solid: #1c283f;
+  --text: #e7edf7;
+  --muted: #b4c0d4;
+  --heading: #ffffff;
+  --border: rgba(179, 199, 229, 0.18);
+  --link: #8ec5ff;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.30);
+  --shadow-hover: 0 18px 44px rgba(0, 0, 0, 0.40);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
   background:
     var(--bg-accent),
     linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 92%, white 8%) 100%);
@@ -73,7 +79,15 @@ a,
 h1,
 h2,
 h3,
-p {
+h4,
+h5,
+h6,
+p,
+li,
+span,
+small,
+strong,
+code {
   transition:
     background-color 320ms ease,
     color 320ms ease,
@@ -83,20 +97,49 @@ p {
     opacity 320ms ease;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Warna dasar */
 body,
+.main-content,
+.main-content section,
+.sidebar,
 p,
 li,
-a,
-h1,
-h2,
-h3 {
-  color: inherit;
+ul,
+ol,
+span,
+label,
+input,
+textarea,
+button,
+code,
+pre,
+td,
+th,
+blockquote {
+  color: var(--text);
 }
 
+/* Heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  color: var(--heading);
+}
+
+/* Teks sekunder */
+small,
+.meta,
+.tagline,
+.muted {
+  color: var(--muted);
+}
+
+/* Link */
 a {
   color: var(--link);
   text-decoration: none;
@@ -106,6 +149,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Layout */
 .container {
   width: 75%;
   max-width: 1400px;
@@ -128,14 +172,12 @@ a:hover {
   font-size: 3.2rem;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  color: var(--heading);
 }
 
 .tagline {
   margin: 0 0 12px;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--muted);
 }
 
 .bio {
@@ -151,7 +193,6 @@ a:hover {
 }
 
 .nav a {
-  color: var(--link);
   font-weight: 600;
   opacity: 0.92;
 }
@@ -187,16 +228,18 @@ a:hover {
   grid-column: 1 / -1;
 }
 
+.main-content section * {
+  border-color: var(--border);
+}
+
 h2 {
   margin: 0 0 18px;
   font-size: 1.55rem;
-  color: var(--heading);
 }
 
 h3 {
   margin: 0 0 6px;
   font-size: 1.08rem;
-  color: var(--heading);
 }
 
 p {
@@ -214,7 +257,6 @@ p {
 
 .meta {
   margin-bottom: 10px;
-  color: var(--muted);
 }
 
 .grid-2 {
@@ -235,7 +277,8 @@ p {
   padding: 9px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card-solid) 86%, transparent 14%);
+  background: color-mix(in srgb, var(--card-solid) 88%, transparent 12%);
+  color: var(--text);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
@@ -259,6 +302,23 @@ p {
 .theme-toggle:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: var(--shadow-hover);
+}
+
+code,
+pre {
+  background: color-mix(in srgb, var(--card-solid) 92%, black 8%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+blockquote {
+  border-left: 4px solid var(--border);
+  padding-left: 16px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 1280px) {
@@ -306,7 +366,15 @@ p {
   h1,
   h2,
   h3,
-  p {
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  span,
+  small,
+  strong,
+  code {
     transition: none;
   }
 
