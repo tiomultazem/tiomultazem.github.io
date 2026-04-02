@@ -247,10 +247,6 @@ p {
   line-height: 1.8;
 }
 
-.item p + p {
-  margin-top: 8px;
-}
-
 .meta {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -270,10 +266,6 @@ p {
 
 .item:last-child {
   margin-bottom: 0;
-}
-
-.meta {
-  margin-bottom: 10px;
 }
 
 .grid-2 {
