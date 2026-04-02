@@ -247,6 +247,18 @@ p {
   line-height: 1.8;
 }
 
+.meta {
+  margin-bottom: 2px;
+}
+
+.item p {
+  margin-bottom: 6px;
+}
+
+.item p:last-child {
+  margin-bottom: 0;
+}
+
 .item {
   margin-bottom: 32px;
 }
