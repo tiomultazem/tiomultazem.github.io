@@ -32,20 +32,19 @@
       </p>
 
       <div id="quotes-rotator" class="quotes-rotator">
-        <div class="quote-item active">
-          <span class="lang-en">"Pearls at the bottom of the sea cannot be reached except by diving"</span>
-          <span class="lang-id">"Mutiara di dasar laut tidak akan bisa diraih kecuali dengan menyelam"</span>
-          <small class="quote-credit">Imam Syafi'i</small>
+        {% for quote in site.data.quotes %}
+        <div class="quote-item {% if forloop.first %}active{% endif %}">
+          {% if quote.en %}
+          <span class="lang-en">{{ quote.en }}</span>
+          {% endif %}
+          {% if quote.id %}
+          <span class="lang-id">{{ quote.id }}</span>
+          {% endif %}
+          {% if quote.credit %}
+          <small class="quote-credit">{{ quote.credit }}</small>
+          {% endif %}
         </div>
-        <div class="quote-item">
-          <span class="lang-en">"A ship does not run on dry land"</span>
-          <span class="lang-id">"Kapal tidak bisa berjalan di atas daratan"</span>
-          <small class="quote-credit">Abul Atahiyah</small>
-        </div>
-        <div class="quote-item">
-          <span class="quote-text">"Do finish what you have started"</span>
-          <small class="quote-credit">Colonel Akhilesh Sinha, Commando: A One Man Army (2013)</small>
-        </div>
+        {% endfor %}
       </div>
       <p class="bio">
         <span class="lang-en">Data analyst with growing expertise in backend development, working with Python,
