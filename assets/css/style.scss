@@ -383,6 +383,37 @@ hr {
   border-top: 1px solid var(--border);
 }
 
+.quotes-rotator {
+  margin-top: 16px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.quote-item {
+  display: none;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.quote-item.active {
+  display: block;
+  opacity: 1;
+}
+
+.quote-credit {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-style: normal;
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 85%;

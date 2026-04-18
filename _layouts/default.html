@@ -28,6 +28,21 @@
         <span class="lang-en">{{ site.description }}</span>
         <span class="lang-id">{{ site.description_id | default: site.description }}</span>
       </p>
+
+      <div id="quotes-rotator" class="quotes-rotator">
+        <div class="quote-item active">
+          <span class="lang-en">"Pearls at the bottom of the sea cannot be reached except by diving"</span>
+          <span class="lang-id">"Mutiara di dasar laut tidak akan bisa diraih kecuali dengan menyelam"</span>
+        </div>
+        <div class="quote-item">
+          <span class="lang-en">"A ship does not run on dry land"</span>
+          <span class="lang-id">"Kapal tidak bisa berjalan di atas daratan"</span>
+        </div>
+        <div class="quote-item">
+          <span class="quote-text">"Do finish what you have started"</span>
+          <small class="quote-credit">Colonel Akhilesh Sinha, Commando: A One Man Army (2013)</small>
+        </div>
+      </div>
       <p class="bio">
         <span class="lang-en">Data analyst with growing expertise in backend development, working with Python, JavaScript, and PHP.</span>
         <span class="lang-id">Data analyst dengan keahlian yang terus berkembang dalam pengembangan backend, menggunakan Python, JavaScript, dan PHP.</span>
@@ -50,6 +65,7 @@
 
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/lang-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/quotes.js' | relative_url }}"></script>
   
 </body>
 </html>
