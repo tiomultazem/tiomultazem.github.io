@@ -117,17 +117,18 @@ layout: default
 
 <section id="contact" class="full">
   <h2><span class="lang-en">Contact</span><span class="lang-id">Kontak</span></h2>
+  <p class="meta"><em>
+    <span class="lang-en">{{ site.data.contact.response_time_en }}</span>
+    <span class="lang-id">{{ site.data.contact.response_time_id }}</span>
+  </em></p>
+  
   <div class="grid-2">
     <div class="item">
       <p>GitHub: <a href="{{ site.data.contact.github }}" target="_blank">{{ site.data.contact.github_label }}</a></p>
       <p>LinkedIn: <a href="{{ site.data.contact.linkedin }}" target="_blank">{{ site.data.contact.linkedin_label }}</a></p>
-      <p>Email: <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></p>
     </div>
     <div class="item">
-      <p class="meta">
-        <span class="lang-en">{{ site.data.contact.response_time_en }}</span>
-        <span class="lang-id">{{ site.data.contact.response_time_id }}</span>
-      </p>
+      <p>Email: <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></p>
       <p>
         <span class="lang-en">Location: {{ site.data.contact.location_en }}</span>
         <span class="lang-id">Lokasi: {{ site.data.contact.location_id }}</span>
