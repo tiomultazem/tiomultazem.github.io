@@ -324,21 +324,24 @@ p {
 }
 
 .top-controls {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  margin-top: 12px;
-  width: 100%;
+  z-index: 999;
 }
 
 .theme-toggle,
 .lang-toggle {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border: 1px solid var(--border);
   border-radius: 50%;
   background: var(--card);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--text);
   box-shadow: var(--shadow);
   cursor: pointer;
@@ -346,13 +349,15 @@ p {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .theme-toggle:hover,
 .lang-toggle:hover {
-  transform: translateY(-2px);
+  transform: scale(1.1);
   box-shadow: var(--shadow-hover);
+  background: var(--card-solid);
 }
 
 /* Language Toggle Logic */
@@ -461,15 +466,15 @@ hr {
     position: sticky;
     top: -1px;
     z-index: 100;
-    padding: 10px 0;
+    padding: 12px 0;
     margin: 0 -10px;
     padding-left: 10px;
     padding-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 12px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, 
+                backdrop-filter 0.3s ease, 
+                box-shadow 0.3s ease, 
+                padding 0.3s ease, 
+                margin 0.3s ease;
   }
 
   .nav.is-stuck {
@@ -478,34 +483,12 @@ hr {
     left: 0;
     width: 100%;
     background: color-mix(in srgb, var(--card-solid) 92%, transparent);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     border-bottom: 1px solid var(--border);
     margin: 0;
-    padding: 10px 20px;
-    gap: 10px;
-  }
-
-  .nav .top-controls {
-    margin-top: 0;
-    width: auto;
-    margin-left: auto;
-    gap: 8px;
-  }
-
-  .nav .theme-toggle,
-  .nav .lang-toggle {
-    width: 38px;
-    height: 38px;
-    font-size: 0.8rem;
-    box-shadow: none;
-    background: color-mix(in srgb, var(--text) 5%, transparent);
-  }
-
-  .nav a {
-    font-size: 0.9rem;
-    padding: 4px 0;
+    padding: 14px 22px;
   }
 
   .main-content {
