@@ -11,10 +11,15 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-    <span class="toggle-label">🌙</span>
-  </button>
+<body data-lang="en">
+  <div class="top-controls">
+    <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+      <span class="toggle-label">EN</span>
+    </button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-label">🌙</span>
+    </button>
+  </div>
 
   <div class="container">
     <aside class="sidebar">
@@ -40,6 +45,7 @@
   </div>
 
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/lang-toggle.js' | relative_url }}"></script>
   
 </body>
 </html>
