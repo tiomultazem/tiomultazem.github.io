@@ -393,12 +393,16 @@ hr {
 
 .quote-item {
   display: none;
-  font-style: italic;
+  font-style: italic !important;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-light);
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
+}
+
+.quote-item * {
+  font-style: italic !important;
 }
 
 .quote-item.active {
@@ -411,7 +415,7 @@ hr {
   margin-top: 4px;
   font-size: 0.85rem;
   opacity: 0.9;
-  font-style: normal;
+  font-style: normal !important;
 }
 
 @media (max-width: 1280px) {
