@@ -124,14 +124,14 @@ layout: default
   
   <div class="grid-2">
     <div class="item">
-      <p>GitHub: <a href="{{ site.data.contact.github }}" target="_blank">{{ site.data.contact.github_label }}</a></p>
-      <p>LinkedIn: <a href="{{ site.data.contact.linkedin }}" target="_blank">{{ site.data.contact.linkedin_label }}</a></p>
+      {% for link in site.data.contact.links %}
+      <p>{{ link.label }}: <a href="{{ link.url }}" target="_blank">{{ link.display }}</a></p>
+      {% endfor %}
     </div>
     <div class="item">
-      <p>Email: <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></p>
       <p>
-        <span class="lang-en">Location: {{ site.data.contact.location_en }}</span>
-        <span class="lang-id">Lokasi: {{ site.data.contact.location_id }}</span>
+        <span class="lang-en">{{ site.data.contact.location_en }}</span>
+        <span class="lang-id">{{ site.data.contact.location_id }}</span>
       </p>
     </div>
   </div>
