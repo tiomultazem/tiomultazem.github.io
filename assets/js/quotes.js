@@ -5,16 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentQuoteIndex = 0;
 
   function showNextQuote() {
-    // Hide current quote
-    quotes[currentQuoteIndex].classList.remove('active');
+    const previousQuote = quotes[currentQuoteIndex];
     
-    // Increment index
+    // 1. Mark current as exit
+    previousQuote.classList.add('exit');
+    previousQuote.classList.remove('active');
+    
+    // 2. Prepare next index
     currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    const nextQuote = quotes[currentQuoteIndex];
     
-    // Show next quote
-    quotes[currentQuoteIndex].classList.add('active');
+    // 3. Set the next as active
+    nextQuote.classList.add('active');
+
+    // 4. Clean up the exit class after animation finishes (0.6s)
+    setTimeout(() => {
+      previousQuote.classList.remove('exit');
+    }, 600);
   }
 
-  // Set interval for 5 seconds (5000ms)
+  // Set interval for 5 seconds
   setInterval(showNextQuote, 5000);
 });
