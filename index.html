@@ -37,7 +37,8 @@ layout: default
   <div class="grid-2">
     {% for category in site.data.skills %}
     <div>
-      <h3><span class="lang-en">{{ category.category_en }}</span><span class="lang-id">{{ category.category_id }}</span></h3>
+      <h3><span class="lang-en">{{ category.category_en }}</span><span class="lang-id">{{ category.category_id }}</span>
+      </h3>
       <div class="chips">
         {% for skill in category.items %}
         <span class="chip">
@@ -94,7 +95,7 @@ layout: default
   <div class="item">
     <h3><a href="{{ project.url }}" target="_blank">{{ project.name }} &#x1F517;</a></h3>
     <p class="meta">
-      <span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: 
+      <span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>:
       <span class="lang-en">{{ project.stack_en }}</span><span class="lang-id">{{ project.stack_id }}</span>
     </p>
     <p class="lang-en">{{ project.desc_en }}</p>
@@ -106,10 +107,10 @@ layout: default
 <section id="contact" class="full">
   <h2><span class="lang-en">Contact</span><span class="lang-id">Kontak</span></h2>
   <p class="meta"><em>
-    <span class="lang-en">{{ site.data.contact.response_time_en }}</span>
-    <span class="lang-id">{{ site.data.contact.response_time_id }}</span>
-  </em></p>
-  
+      <span class="lang-en">{{ site.data.contact.response_time_en }}</span>
+      <span class="lang-id">{{ site.data.contact.response_time_id }}</span>
+    </em></p>
+
   <div class="grid-2">
     <div class="item">
       {% for link in site.data.contact.links %}
