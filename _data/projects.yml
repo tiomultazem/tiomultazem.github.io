@@ -7,8 +7,8 @@
 
 - name: "TwinClean"
   url: "https://github.com/tiomultazem/twinclean"
-  stack_en: "Python, Tkinter"
-  stack_id: "Python, Tkinter"
+  stack_en: "Python, Tkinter, Selenium"
+  stack_id: "Python, Tkinter, Selenium"
   desc_en: "A fast and minimalist duplicate file finder and remover tool designed for efficiency."
   desc_id: "Alat pencari dan penghapus file duplikat yang mengutamakan kecepatan dan kemudahan penggunaan."
 
@@ -16,8 +16,8 @@
   url: "https://github.com/tiomultazem/evalssn-helper"
   stack_en: "PHP, MySQL"
   stack_id: "PHP, MySQL"
-  desc_en: "Intranet tool for evaluating SSN anomalies via local municipal servers to streamline validation workflows."
-  desc_id: "Alat intranet untuk evaluasi anomali SSN melalui server lokal kabupaten/kota guna mempercepat proses validasi."
+  desc_en: "Intranet web for evaluating SSN anomalies via local municipal servers to streamline validation workflows."
+  desc_id: "Web intranet untuk evaluasi anomali SSN melalui server lokal kabupaten/kota guna mempercepat proses validasi."
 
 - name: "Matcha Helper"
   url: "https://github.com/tiomultazem/matchamu"
