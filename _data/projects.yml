@@ -2,8 +2,8 @@
   url: "https://github.com/tiomultazem/kipapp-helper"
   stack_en: "Python, Selenium"
   stack_id: "Python, Selenium"
-  desc_en: "Automation scripts to assist in data management and performance monitoring on the KiPApp platform (BPS Civil Servant SKP)."
-  desc_id: "Skrip otomatisasi pembantu untuk manajemen data dan monitoring kinerja pada platform KiPApp (SKP PNS BPS)."
+  desc_en: "Automation-powered desktop application to streamline SKP entry for BPS employees."
+  desc_id: "Aplikasi desktop berbasis otomatisasi untuk meningkatkan efisiensi entri SKP Pegawai BPS."
 
 - name: "TwinClean"
   url: "https://github.com/tiomultazem/twinclean"
