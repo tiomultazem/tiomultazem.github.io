@@ -475,15 +475,17 @@ hr {
   }
 
   .nav.is-stuck {
-    background: color-mix(in srgb, var(--card-solid) 85%, transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: color-mix(in srgb, var(--card-solid) 92%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     border-bottom: 1px solid var(--border);
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0;
+    padding: 14px 22px;
   }
 
   .main-content {
