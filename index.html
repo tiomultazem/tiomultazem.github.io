@@ -25,221 +25,94 @@ layout: default
 <section id="experience" class="full">
   <h2><span class="lang-en">Work Experience</span><span class="lang-id">Pengalaman Kerja</span></h2>
   <div class="timeline">
+    {% for job in site.data.experience %}
     <div class="item">
       <h3>
-        <span class="lang-en">IT Support Officer — BPS - Statistics Indonesia</span>
-        <span class="lang-id">Pranata Komputer — Badan Pusat Statistik</span>
+        <span class="lang-en">{{ job.title_en }}</span>
+        <span class="lang-id">{{ job.title_id }}</span>
       </h3>
       <p class="meta">
-        <span class="lang-en">Tabalong, South Kalimantan | 2024 — Present</span>
-        <span class="lang-id">Tabalong, Kalimantan Selatan | 2024 — Sekarang</span>
+        <span class="lang-en">{{ job.meta_en }}</span>
+        <span class="lang-id">{{ job.meta_id }}</span>
       </p>
-      <p class="lang-en">
-        Deliver end-to-end IT support covering network, hardware, and system troubleshooting.
-        Develop lightweight applications and automation scripts to streamline workflows, and
-        maintain digital data and map archives to support organizational operations.
-      </p>
-      <p class="lang-id">
-        Memberikan dukungan IT menyeluruh yang mencakup pemecahan masalah jaringan, perangkat keras, dan sistem.
-        Mengembangkan aplikasi ringan dan skrip otomatisasi untuk merampingkan alur kerja, serta
-        memelihara data digital dan arsip peta untuk mendukung operasi organisasi.
-      </p>
+      {% if job.note_en %}<p class="lang-en"><em>{{ job.note_en }}</em></p>{% endif %}
+      {% if job.note_id %}<p class="lang-id"><em>{{ job.note_id }}</em></p>{% endif %}
+      <p class="lang-en">{{ job.desc_en }}</p>
+      <p class="lang-id">{{ job.desc_id }}</p>
     </div>
-
-    <div class="item">
-      <h3>
-        <span class="lang-en">IT & Media Support Intern — BPS - Statistics Indonesia</span>
-        <span class="lang-id">Magang IT & Bidang Humas — Badan Pusat Statistik</span>
-      </h3>
-      <p class="meta">
-        <span class="lang-en">Tulungagung, East Java | Oct 2024 — Nov 2024</span>
-        <span class="lang-id">Tulungagung, Jawa Timur | Okt 2024 — Nov 2024</span>
-      </p>
-      <p class="lang-en">
-        Delivered operational support across IT and digital communication functions, focusing on
-        hardware maintenance and contributing to social media content management and development.
-      </p>
-      <p class="lang-id">
-        Memberikan dukungan operasional di seluruh fungsi IT dan komunikasi digital, berfokus pada
-        pemeliharaan perangkat keras dan berkontribusi pada manajemen serta pengembangan konten media sosial.
-      </p>
-    </div>
-
-    <div class="item">
-      <h3>
-        <span class="lang-en">Operations & Data Intern — BPS - Statistics Indonesia</span>
-        <span class="lang-id">Magang Operasional & Data — Badan Pusat Statistik</span>
-      </h3>
-      <p class="meta">
-        <span class="lang-en">Tulungagung, East Java | Aug 2023 — Oct 2023</span>
-        <span class="lang-id">Tulungagung, Jawa Timur | Agu 2023 — Okt 2023</span>
-      </p>
-      <p class="lang-en"><em>Academic Internship (Credit Conversion Program)</em></p>
-      <p class="lang-id"><em>Magang Akademik (Program Konversi SKS)</em></p>
-      <p class="lang-en">
-        Supported cross-functional operations across multiple teams, with primary responsibilities
-        in data entry, validation, and data quality control, alongside contributing to social media
-        content creation.
-      </p>
-      <p class="lang-id">
-        Mendukung operasi lintas tim, dengan tanggung jawab utama dalam
-        entri data, validasi, dan kontrol kualitas data, sekaligus berkontribusi pada pembuatan
-        konten media sosial.
-      </p>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="skills" class="full">
   <h2><span class="lang-en">Skillset</span><span class="lang-id">Keahlian</span></h2>
   <div class="grid-2">
+    {% for category in site.data.skills %}
     <div>
-      <h3><span class="lang-en">Languages</span><span class="lang-id">Bahasa</span></h3>
+      <h3><span class="lang-en">{{ category.category_en }}</span><span class="lang-id">{{ category.category_id }}</span></h3>
       <div class="chips">
-        <span class="chip">Python</span>
-        <span class="chip">PHP</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">SQL</span>
-        <span class="chip">R</span>
+        {% for skill in category.items %}
+        <span class="chip">
+          <span class="lang-en">{{ skill.name_en }}</span>
+          <span class="lang-id">{{ skill.name_id }}</span>
+        </span>
+        {% endfor %}
       </div>
     </div>
-
-    <div>
-      <h3><span class="lang-en">Data & Analytics</span><span class="lang-id">Data & Analitik</span></h3>
-      <div class="chips">
-        <span class="chip"><span class="lang-en">Data Cleaning</span><span class="lang-id">Data Cleaning</span></span>
-        <span class="chip"><span class="lang-en">Data Visualization</span><span class="lang-id">Visualisasi Data</span></span>
-        <span class="chip"><span class="lang-en">Automation</span><span class="lang-id">Otomatisasi</span></span>
-        <span class="chip"><span class="lang-en">Data Modeling</span><span class="lang-id">Pemodelan Data</span></span>
-        <span class="chip"><span class="lang-en">Information Retrieval</span><span class="lang-id">Information Retrieval</span></span>
-      </div>
-    </div>
-
-    <div>
-      <h3><span class="lang-en">Frameworks</span><span class="lang-id">Framework</span></h3>
-      <div class="chips">
-        <span class="chip">React Native</span>
-        <span class="chip">CodeIgniter 4</span>
-        <span class="chip">Laravel</span>
-      </div>
-    </div>
-
-    <div>
-      <h3><span class="lang-en">Libraries</span><span class="lang-id">Library</span></h3>
-      <div class="chips">
-        <span class="chip">Pandas</span>
-        <span class="chip">NumPy</span>
-        <span class="chip">GeoPandas</span>
-        <span class="chip">Selenium</span>
-        <span class="chip">Tkinter</span>
-      </div>
-    </div>
-
-    <div>
-      <h3><span class="lang-en">Tools</span><span class="lang-id">Tools</span></h3>
-      <div class="chips">
-        <span class="chip">Git</span>
-        <span class="chip">VS Code</span>
-        <span class="chip">Jupyter Notebook</span>
-        <span class="chip">Excel</span>
-        <span class="chip">Looker Studio</span>
-        <span class="chip">QGIS</span>
-        <span class="chip">RStudio</span>
-        <span class="chip">PSPP</span>
-        <span class="chip">Laragon</span>
-        <span class="chip">XAMPP</span>
-        <span class="chip">Apache</span>
-        <span class="chip">Postman</span>
-      </div>
-    </div>
-
-    <div>
-      <h3><span class="lang-en">Specializations</span><span class="lang-id">Ranah Keahlian</span></h3>
-      <div class="chips">
-        <span class="chip"><span class="lang-en">Web Development</span><span class="lang-id">Pengembangan Web</span></span>
-        <span class="chip">Web Scraping</span>
-        <span class="chip"><span class="lang-en">API Integration</span><span class="lang-id">Integrasi API</span></span>
-        <span class="chip"><span class="lang-en">Android App</span><span class="lang-id">Aplikasi Android</span></span>
-        <span class="chip"><span class="lang-en">Desktop App</span><span class="lang-id">Aplikasi Desktop</span></span>
-        <span class="chip">Data Engineering</span>
-        <span class="chip">Data Visualization</span>
-      </div>
-    </div>
-
-    <div>
-      <h3><span class="lang-en">Databases</span><span class="lang-id">Basis Data</span></h3>
-      <div class="chips">
-        <span class="chip">MySQL / MariaDB</span>
-        <span class="chip">SQL Server</span>
-        <span class="chip">Firebase</span>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="education" class="full">
   <h2><span class="lang-en">Education</span><span class="lang-id">Pendidikan</span></h2>
   <div class="timeline">
+    {% for edu in site.data.education %}
     <div class="item">
       <h3>
-        <span class="lang-en">Applied Statistics — Politeknik Statistika STIS</span>
-        <span class="lang-id">Sarjana Terapan Statistik — Politeknik Statistika STIS</span>
+        {% if edu.degree_en %}
+        <span class="lang-en">{{ edu.degree_en }} — {{ edu.institution_en }}</span>
+        <span class="lang-id">{{ edu.degree_id }} — {{ edu.institution_id }}</span>
+        {% else %}
+        {{ edu.institution_en }}
+        {% endif %}
       </h3>
-      <p class="meta">2020 — 2024</p>
+      <p class="meta">{{ edu.period }}</p>
+      {% if edu.desc_en %}
       <p class="lang-en">
-        Major in Computational Statistics, specialization in Information Systems.
+        {{ edu.desc_en }}
+        {% if edu.thesis %}
         <br>
-        Thesis: <a href="https://stis.ac.id/media/source/informasi-publik/layanan-publik/2024/5.%20Daftar%20Isi%20Executive%20Summary%20Skripsi%20KS%202023-2024.pdf" target="_blank">"Optimization of Range Value-at-Risk Measures from the Lomax Distribution Using Particle Swarm Optimization and Genetic Algorithm Algorithms"</a>
+        Thesis: <a href="{{ edu.thesis.url }}" target="_blank">"{{ edu.thesis.title_en }}"</a>
+        {% endif %}
       </p>
+      {% endif %}
+      {% if edu.desc_id %}
       <p class="lang-id">
-        Program Studi Komputasi Statistik, Peminatan Sistem Informasi.
+        {{ edu.desc_id }}
+        {% if edu.thesis %}
         <br>
-        Skripsi: <a href="https://stis.ac.id/media/source/informasi-publik/layanan-publik/2024/5.%20Daftar%20Isi%20Executive%20Summary%20Skripsi%20KS%202023-2024.pdf" target="_blank">"Optimisasi Ukuran Risiko Range Value-at-Risk Dari Distribusi Lomax Menggunakan Algoritma Particle Swarm Optimization Dan Genetic Algorithm"</a>
+        Skripsi: <a href="{{ edu.thesis.url }}" target="_blank">"{{ edu.thesis.title_id }}"</a>
+        {% endif %}
       </p>
+      {% endif %}
     </div>
-
-    <div class="item">
-      <h3>MA Al-Irsyad Tengaran</h3>
-      <p class="meta">2016 — 2019</p>
-    </div>
-
-    <div class="item">
-      <h3>MTs Al-Irsyad Tengaran</h3>
-      <p class="meta">2013 — 2016</p>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="projects" class="full">
   <h2><span class="lang-en">Projects</span><span class="lang-id">Riwayat Proyek</span></h2>
-
+  {% for project in site.data.projects %}
   <div class="item">
-    <h3><a href="https://github.com/tiomultazem/kipapp-helper" target="_blank">KiPApp Helper &#x1F517;</a></h3>
-    <p class="meta"><span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: Python, Selenium</p>
-    <p class="lang-en">Automation scripts to assist in data management and performance monitoring on the KiPApp platform (BPS Civil Servant SKP).</p>
-    <p class="lang-id">Skrip otomatisasi pembantu untuk manajemen data dan monitoring kinerja pada platform KiPApp (SKP PNS BPS).</p>
+    <h3><a href="{{ project.url }}" target="_blank">{{ project.name }} &#x1F517;</a></h3>
+    <p class="meta">
+      <span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: 
+      <span class="lang-en">{{ project.stack_en }}</span><span class="lang-id">{{ project.stack_id }}</span>
+    </p>
+    <p class="lang-en">{{ project.desc_en }}</p>
+    <p class="lang-id">{{ project.desc_id }}</p>
   </div>
-
-  <div class="item">
-    <h3><a href="https://github.com/tiomultazem/twinclean" target="_blank">TwinClean &#x1F517;</a></h3>
-    <p class="meta"><span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: Python, Tkinter</p>
-    <p class="lang-en">A fast and minimalist duplicate file finder and remover tool designed for efficiency.</p>
-    <p class="lang-id">Alat pencari dan penghapus file duplikat yang mengutamakan kecepatan dan kemudahan penggunaan.</p>
-  </div>
-
-  <div class="item">
-    <h3><a href="https://github.com/tiomultazem/evalssn-helper" target="_blank">EvalSSN Helper &#x1F517;</a></h3>
-    <p class="meta"><span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: PHP, MySQL</p>
-    <p class="lang-en">Intranet tool for evaluating SSN anomalies via local municipal servers to streamline validation workflows.</p>
-    <p class="lang-id">Alat intranet untuk evaluasi anomali SSN melalui server lokal kabupaten/kota guna mempercepat proses validasi.</p>
-  </div>
-
-  <div class="item">
-    <h3><a href="https://github.com/tiomultazem/matchamu" target="_blank">Matcha Helper &#x1F517;</a></h3>
-    <p class="meta"><span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span>: Jupyter Notebook, Pandas</p>
-    <p class="lang-en">Scripts for processing and cleaning SBR (Statistical Business Register) data within the Matchapro system.</p>
-    <p class="lang-id">Kumpulan skrip untuk pengolahan dan pembersihan data SBR (Statistical Business Register) di Matchapro.</p>
-  </div>
+  {% endfor %}
 </section>
 
 <section id="contact" class="full">
