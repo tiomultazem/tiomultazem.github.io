@@ -24,7 +24,10 @@
   <div class="container">
     <aside class="sidebar">
       <h1>{{ site.title }}</h1>
-      <p class="tagline">{{ site.description }}</p>
+      <p class="tagline">
+        <span class="lang-en">{{ site.description }}</span>
+        <span class="lang-id">{{ site.description_id | default: site.description }}</span>
+      </p>
       <p class="bio">
         <span class="lang-en">Data analyst with growing expertise in backend development, working with Python, JavaScript, and PHP.</span>
         <span class="lang-id">Data analyst dengan keahlian yang terus berkembang dalam pengembangan backend, menggunakan Python, JavaScript, dan PHP.</span>
