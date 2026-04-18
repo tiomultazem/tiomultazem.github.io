@@ -35,10 +35,10 @@
         {% for quote in site.data.quotes %}
         <div class="quote-item {% if forloop.first %}active{% endif %}">
           {% if quote.en %}
-          <span class="lang-en">{{ quote.en }}</span>
+          <span class="lang-en">"{{ quote.en }}"</span>
           {% endif %}
           {% if quote.id %}
-          <span class="lang-id">{{ quote.id }}</span>
+          <span class="lang-id">"{{ quote.id }}"</span>
           {% endif %}
           {% if quote.credit %}
           <small class="quote-credit">{{ quote.credit }}</small>
