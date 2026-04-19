@@ -206,9 +206,15 @@ layout: default
         {% for role in site.data.mentoring %}
         <div class="item">
           <h4>
+            {% if role.url %}
+              <a href="{{ role.url }}" target="_blank">
+            {% endif %}
             <span class="lang-en">{{ role.role_en }}</span>
             <span class="lang-id">{{ role.role_id }}</span>
             <span class="lang-ar">{{ role.role_ar }}</span>
+            {% if role.url %}
+              &#x1F517;</a>
+            {% endif %}
           </h4>
           <p class="meta">{{ role.organization }} | {{ role.period }}</p>
           <p class="lang-en">{{ role.desc_en }}</p>
@@ -225,9 +231,15 @@ layout: default
         {% for role in site.data.organizations %}
         <div class="item">
           <h4>
+            {% if role.url %}
+              <a href="{{ role.url }}" target="_blank">
+            {% endif %}
             <span class="lang-en">{{ role.role_en }}</span>
             <span class="lang-id">{{ role.role_id }}</span>
             <span class="lang-ar">{{ role.role_ar }}</span>
+            {% if role.url %}
+              &#x1F517;</a>
+            {% endif %}
           </h4>
           <p class="meta">{{ role.organization }} | {{ role.period }}</p>
           <p class="lang-en">{{ role.desc_en }}</p>
@@ -243,10 +255,12 @@ layout: default
       {% for work in site.data.creative %}
       <div class="item">
         <h4>
-          <span class="lang-en">{{ work.name_en }}</span>
-          <span class="lang-id">{{ work.name_id }}</span>
-          <span class="lang-ar">{{ work.name_ar }}</span>
-          {% if work.link %} &#x1F517;{% endif %}
+          <a href="{{ work.link }}" target="_blank">
+            <span class="lang-en">{{ work.name_en }}</span>
+            <span class="lang-id">{{ work.name_id }}</span>
+            <span class="lang-ar">{{ work.name_ar }}</span>
+            &#x1F517;
+          </a>
         </h4>
         <p class="lang-en">{{ work.desc_en }}</p>
         <p class="lang-id">{{ work.desc_id }}</p>

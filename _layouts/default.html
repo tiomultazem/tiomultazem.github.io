@@ -48,7 +48,11 @@
           <span class="lang-ar">"{{ quote.ar }}"</span>
           {% endif %}
           {% if quote.credit %}
-          <small class="quote-credit">{{ quote.credit }}</small>
+          <small class="quote-credit">
+            <span class="lang-en">{{ quote.credit }}</span>
+            <span class="lang-id">{{ quote.credit }}</span>
+            <span class="lang-ar">{{ quote.credit_ar | default: quote.credit }}</span>
+          </small>
           {% endif %}
         </div>
         {% endfor %}
