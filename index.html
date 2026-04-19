@@ -84,6 +84,22 @@ layout: default
   </div>
 </section>
 
+<section id="projects" class="full">
+  <h2><span class="lang-en">Projects</span><span class="lang-id">Riwayat Proyek</span><span class="lang-ar">المشاريع</span></h2>
+  {% for project in site.data.projects %}
+  <div class="item">
+    <h3><a href="{{ project.url }}" target="_blank">{{ project.name }} &#x1F517;</a></h3>
+    <p class="meta">
+      <span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span><span class="lang-ar">التقنيات</span>:
+      <span class="lang-en">{{ project.stack_en }}</span><span class="lang-id">{{ project.stack_id }}</span><span class="lang-ar">{{ project.stack_ar }}</span>
+    </p>
+    <p class="lang-en">{{ project.desc_en }}</p>
+    <p class="lang-id">{{ project.desc_id }}</p>
+    <p class="lang-ar">{{ project.desc_ar }}</p>
+  </div>
+  {% endfor %}
+</section>
+
 <section id="education" class="full">
   <h2><span class="lang-en">Education</span><span class="lang-id">Pendidikan</span><span class="lang-ar">التعليم</span></h2>
   <div class="timeline">
@@ -133,22 +149,6 @@ layout: default
   </div>
 </section>
 
-<section id="projects" class="full">
-  <h2><span class="lang-en">Projects</span><span class="lang-id">Riwayat Proyek</span><span class="lang-ar">المشاريع</span></h2>
-  {% for project in site.data.projects %}
-  <div class="item">
-    <h3><a href="{{ project.url }}" target="_blank">{{ project.name }} &#x1F517;</a></h3>
-    <p class="meta">
-      <span class="lang-en">Tech stack</span><span class="lang-id">Teknologi</span><span class="lang-ar">التقنيات</span>:
-      <span class="lang-en">{{ project.stack_en }}</span><span class="lang-id">{{ project.stack_id }}</span><span class="lang-ar">{{ project.stack_ar }}</span>
-    </p>
-    <p class="lang-en">{{ project.desc_en }}</p>
-    <p class="lang-id">{{ project.desc_id }}</p>
-    <p class="lang-ar">{{ project.desc_ar }}</p>
-  </div>
-  {% endfor %}
-</section>
-
 <section id="achievements" class="full">
   <h2><span class="lang-en">Awards & Achievements</span><span class="lang-id">Penghargaan & Prestasi</span><span class="lang-ar">الجوائز والإنجازات</span></h2>
   <div class="grid-2">
@@ -168,74 +168,93 @@ layout: default
   </div>
 </section>
 
-<section id="certifications" class="full">
-  <h2><span class="lang-en">Certifications</span><span class="lang-id">Sertifikasi</span><span class="lang-ar">الشهادات</span></h2>
-  <div class="grid-2">
-    {% for cert in site.data.certifications %}
-    <div class="item">
-      <h3>{{ cert.title }}</h3>
-      <p class="meta">{{ cert.issuer }}</p>
-      <p class="lang-en">{{ cert.desc_en }}</p>
-      <p class="lang-id">{{ cert.desc_id }}</p>
-      <p class="lang-ar">{{ cert.desc_ar }}</p>
-    </div>
-    {% endfor %}
+<!-- COLLAPSIBLE EXTRA SECTION -->
+<section id="extra" class="full collapsible">
+  <div class="collapsible-header" id="extra-toggle">
+    <h2>
+      <span class="lang-en">Extra Experiences</span>
+      <span class="lang-id">Pengalaman Ekstra</span>
+      <span class="lang-ar">تجارب إضافية</span>
+      <span class="toggle-icon">▼</span>
+    </h2>
+    <p class="meta">
+      <span class="lang-en">Leadership, community work, and creative interests.</span>
+      <span class="lang-id">Kepemimpinan, kerja komunitas, dan minat kreatif.</span>
+      <span class="lang-ar">القيادة، والعمل المجتمعي، والاهتمامات الإبداعية.</span>
+    </p>
   </div>
-</section>
 
-<section id="mentoring" class="full">
-  <h2><span class="lang-en">Education & Mentoring</span><span class="lang-id">Pendidikan & Mentor</span><span class="lang-ar">التعليم والتوجيه</span></h2>
-  <div class="timeline">
-    {% for role in site.data.mentoring %}
-    <div class="item">
-      <h3>
-        <span class="lang-en">{{ role.role_en }}</span>
-        <span class="lang-id">{{ role.role_id }}</span>
-        <span class="lang-ar">{{ role.role_ar }}</span>
-      </h3>
-      <p class="meta">{{ role.organization }} | {{ role.period }}</p>
-      <p class="lang-en">{{ role.desc_en }}</p>
-      <p class="lang-id">{{ role.desc_id }}</p>
-      <p class="lang-ar">{{ role.desc_ar }}</p>
+  <div class="collapsible-content">
+    <div id="certifications" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <h3><span class="lang-en">Certifications</span><span class="lang-id">Sertifikasi</span><span class="lang-ar">الشهادات</span></h3>
+      <div class="grid-2">
+        {% for cert in site.data.certifications %}
+        <div class="item">
+          <h4>{{ cert.title }}</h4>
+          <p class="meta">{{ cert.issuer }}</p>
+          <p class="lang-en">{{ cert.desc_en }}</p>
+          <p class="lang-id">{{ cert.desc_id }}</p>
+          <p class="lang-ar">{{ cert.desc_ar }}</p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
 
-<section id="organizations" class="full">
-  <h2><span class="lang-en">Leadership & Organizations</span><span class="lang-id">Kepemimpinan & Organisasi</span><span class="lang-ar">القيادة والمنظمات</span></h2>
-  <div class="timeline">
-    {% for role in site.data.organizations %}
-    <div class="item">
-      <h3>
-        <span class="lang-en">{{ role.role_en }}</span>
-        <span class="lang-id">{{ role.role_id }}</span>
-        <span class="lang-ar">{{ role.role_ar }}</span>
-      </h3>
-      <p class="meta">{{ role.organization }} | {{ role.period }}</p>
-      <p class="lang-en">{{ role.desc_en }}</p>
-      <p class="lang-id">{{ role.desc_id }}</p>
-      <p class="lang-ar">{{ role.desc_ar }}</p>
+    <div id="mentoring" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <h3><span class="lang-en">Education & Mentoring</span><span class="lang-id">Pendidikan & Mentor</span><span class="lang-ar">التعليم والتوجيه</span></h3>
+      <div class="timeline">
+        {% for role in site.data.mentoring %}
+        <div class="item">
+          <h4>
+            <span class="lang-en">{{ role.role_en }}</span>
+            <span class="lang-id">{{ role.role_id }}</span>
+            <span class="lang-ar">{{ role.role_ar }}</span>
+          </h4>
+          <p class="meta">{{ role.organization }} | {{ role.period }}</p>
+          <p class="lang-en">{{ role.desc_en }}</p>
+          <p class="lang-id">{{ role.desc_id }}</p>
+          <p class="lang-ar">{{ role.desc_ar }}</p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
 
-<section id="creative" class="full">
-  <h2><span class="lang-en">Creative Works</span><span class="lang-id">Karya Kreatif</span><span class="lang-ar">الأعمال الإبداعية</span></h2>
-  {% for work in site.data.creative %}
-  <div class="item">
-    <h3>
-      <span class="lang-en">{{ work.name_en }}</span>
-      <span class="lang-id">{{ work.name_id }}</span>
-      <span class="lang-ar">{{ work.name_ar }}</span>
-      {% if work.link %} &#x1F517;{% endif %}
-    </h3>
-    <p class="lang-en">{{ work.desc_en }}</p>
-    <p class="lang-id">{{ work.desc_id }}</p>
-    <p class="lang-ar">{{ work.desc_ar }}</p>
+    <div id="organizations" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <h3><span class="lang-en">Leadership & Organizations</span><span class="lang-id">Kepemimpinan & Organisasi</span><span class="lang-ar">القيادة والمنظمات</span></h3>
+      <div class="timeline">
+        {% for role in site.data.organizations %}
+        <div class="item">
+          <h4>
+            <span class="lang-en">{{ role.role_en }}</span>
+            <span class="lang-id">{{ role.role_id }}</span>
+            <span class="lang-ar">{{ role.role_ar }}</span>
+          </h4>
+          <p class="meta">{{ role.organization }} | {{ role.period }}</p>
+          <p class="lang-en">{{ role.desc_en }}</p>
+          <p class="lang-id">{{ role.desc_id }}</p>
+          <p class="lang-ar">{{ role.desc_ar }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="creative" style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 30px;">
+      <h3><span class="lang-en">Creative Works</span><span class="lang-id">Karya Kreatif</span><span class="lang-ar">الأعمال الإبداعية</span></h3>
+      {% for work in site.data.creative %}
+      <div class="item">
+        <h4>
+          <span class="lang-en">{{ work.name_en }}</span>
+          <span class="lang-id">{{ work.name_id }}</span>
+          <span class="lang-ar">{{ work.name_ar }}</span>
+          {% if work.link %} &#x1F517;{% endif %}
+        </h4>
+        <p class="lang-en">{{ work.desc_en }}</p>
+        <p class="lang-id">{{ work.desc_id }}</p>
+        <p class="lang-ar">{{ work.desc_ar }}</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
 </section>
 
 <section id="contact" class="full">

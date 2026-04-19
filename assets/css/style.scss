@@ -492,6 +492,51 @@ p {
   box-shadow: 0 0 10px rgba(var(--glow), 0.2);
 }
 
+/* Collapsible Section */
+.collapsible {
+  overflow: hidden;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.collapsible-header:hover h2 {
+  color: var(--link);
+}
+
+.toggle-icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-lang="ar"] .toggle-icon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.collapsible.is-open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.collapsible.is-open .collapsible-content {
+  max-height: 5000px; /* Large enough fallback */
+  opacity: 1;
+  margin-top: 10px;
+}
+
 code,
 pre {
   background: color-mix(in srgb, var(--card-solid) 92%, black 8%);
