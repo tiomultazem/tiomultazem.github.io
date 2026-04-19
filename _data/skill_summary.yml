@@ -1,0 +1,19 @@
+- skill_en: "Public Speaking"
+  skill_id: "Public Speaking"
+  skill_ar: "الخطابة العامة"
+  level: 5
+
+- skill_en: "English"
+  skill_id: "Bahasa Inggris"
+  skill_ar: "اللغة الإنجليزية"
+  level: 4
+
+- skill_en: "Arabic"
+  skill_id: "Bahasa Arab"
+  skill_ar: "اللغة العربية"
+  level: 5
+
+- skill_en: "AI-Accelerated Development"
+  skill_id: "Efisiensi Berbasis AI"
+  skill_ar: "التطوير المسرع بالذكاء الاصطناعي"
+  level: 5

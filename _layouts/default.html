@@ -32,6 +32,7 @@
       <p class="tagline">
         <span class="lang-en">{{ site.description }}</span>
         <span class="lang-id">{{ site.description_id | default: site.description }}</span>
+        <span class="lang-ar">{{ site.description_ar }}</span>
       </p>
 
       <div id="quotes-rotator" class="quotes-rotator">
@@ -42,6 +43,9 @@
           {% endif %}
           {% if quote.id %}
           <span class="lang-id">"{{ quote.id }}"</span>
+          {% endif %}
+          {% if quote.ar %}
+          <span class="lang-ar">"{{ quote.ar }}"</span>
           {% endif %}
           {% if quote.credit %}
           <small class="quote-credit">{{ quote.credit }}</small>
@@ -54,19 +58,21 @@
           JavaScript, and PHP.</span>
         <span class="lang-id">Data analyst dengan keahlian yang terus berkembang dalam pengembangan backend, menggunakan
           Python, JavaScript, dan PHP.</span>
+        <span class="lang-ar">محلل بيانات مع خبرة متنامية في تطوير الأنظمة الخلفية، بالعمل مع بايثون، وجافا سكريبت، وبي إتش بي.</span>
       </p>
 
       <div id="nav-sentinel"></div>
       <nav class="nav">
-        <a href="#about"><span class="lang-en">About</span><span class="lang-id">Tentang</span></a>
-        <a href="#experience"><span class="lang-en">Work</span><span class="lang-id">Pengalaman</span></a>
-        <a href="#skills"><span class="lang-en">Skills</span><span class="lang-id">Keahlian</span></a>
-        <a href="#education"><span class="lang-en">Education</span><span class="lang-id">Pendidikan</span></a>
-        <a href="#projects"><span class="lang-en">Projects</span><span class="lang-id">Proyek</span></a>
-        <a href="#achievements"><span class="lang-en">Awards</span><span class="lang-id">Penghargaan</span></a>
-        <a href="#certifications"><span class="lang-en">Cert.</span><span class="lang-id">Sertifikasi</span></a>
-        <a href="#leadership"><span class="lang-en">Community</span><span class="lang-id">Komunitas</span></a>
-        <a href="#contact"><span class="lang-en">Contact</span><span class="lang-id">Kontak</span></a>
+        <a href="#about"><span class="lang-en">About</span><span class="lang-id">Tentang</span><span class="lang-ar">حول</span></a>
+        <a href="#experience"><span class="lang-en">Work</span><span class="lang-id">Pengalaman</span><span class="lang-ar">الخبرة</span></a>
+        <a href="#skills"><span class="lang-en">Skills</span><span class="lang-id">Keahlian</span><span class="lang-ar">المهارات</span></a>
+        <a href="#education"><span class="lang-en">Edu</span><span class="lang-id">Edu</span><span class="lang-ar">التعليم</span></a>
+        <a href="#projects"><span class="lang-en">Proj</span><span class="lang-id">Proj</span><span class="lang-ar">المشاريع</span></a>
+        <a href="#achievements"><span class="lang-en">Awards</span><span class="lang-id">Prestasi</span><span class="lang-ar">الجوائز</span></a>
+        <a href="#certifications"><span class="lang-en">Cert.</span><span class="lang-id">Sertif</span><span class="lang-ar">الشهادات</span></a>
+        <a href="#mentoring"><span class="lang-en">Mentor</span><span class="lang-id">Mentor</span><span class="lang-ar">التوجيه</span></a>
+        <a href="#organizations"><span class="lang-en">Org</span><span class="lang-id">Org</span><span class="lang-ar">المنظمات</span></a>
+        <a href="#contact"><span class="lang-en">Contact</span><span class="lang-id">Kontak</span><span class="lang-ar">اتصل</span></a>
       </nav>
     </aside>
 

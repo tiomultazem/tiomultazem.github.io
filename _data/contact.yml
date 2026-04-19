@@ -1,5 +1,6 @@
 response_time_en: "Usually responds within 2x24 hours"
 response_time_id: "Biasanya merespon dalam 2x24 jam"
+response_time_ar: "عادة ما يتم الرد خلال يومين"
 
 links:
   - label: "GitHub"
@@ -14,3 +15,4 @@ links:
 
 location_en: "Location: Tabalong, South Kalimantan, Indonesia"
 location_id: "Lokasi: Tabalong, Kalimantan Selatan, Indonesia"
+location_ar: "الموقع: تبالونج، جنوب كاليمانتان، إندونيسيا"

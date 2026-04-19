@@ -216,6 +216,19 @@ a:hover {
   line-height: 1.8;
 }
 
+  @media (max-width: 1024px) {
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+    }
+
+    .nav a {
+      font-size: 0.85rem;
+      padding: 4px 0;
+    }
+  }
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -415,13 +428,68 @@ p {
   background: var(--card-solid);
 }
 
-/* Language Toggle Logic */
-[data-lang="en"] .lang-id {
+/* Language Toggle Visibility Logic */
+[data-lang="en"] .lang-id, [data-lang="en"] .lang-ar {
   display: none !important;
 }
 
-[data-lang="id"] .lang-en {
+[data-lang="id"] .lang-en, [data-lang="id"] .lang-ar {
   display: none !important;
+}
+
+[data-lang="ar"] .lang-en, [data-lang="ar"] .lang-id {
+  display: none !important;
+}
+
+/* RTL Support for Arabic */
+[data-lang="ar"] {
+  direction: rtl;
+  text-align: right;
+
+  .timeline .item {
+    padding-left: 0;
+    padding-right: 32px;
+    border-left: 0;
+    border-right: 1px solid var(--border);
+
+    &::before {
+      left: auto;
+      right: -6px;
+    }
+  }
+
+  .top-controls {
+    right: auto;
+    left: 28px;
+  }
+}
+
+/* Skill Summary Dots */
+.skill-level-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.skill-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--border) 60%, transparent);
+  transition: all 0.3s ease;
+}
+
+.dot.filled {
+  background: var(--link);
+  box-shadow: 0 0 10px rgba(var(--glow), 0.2);
 }
 
 code,

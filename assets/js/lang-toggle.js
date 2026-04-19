@@ -3,19 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleLabel = langToggleBtn.querySelector(".toggle-label");
   const body = document.body;
 
-  // Cek apakah ada preferensi bahasa di localStorage
-  const currentLang = localStorage.getItem("lang") || "en";
+  const languages = ["en", "id", "ar"];
+  const labels = { "en": "EN", "id": "ID", "ar": "AR" };
+
+  // Init from localStorage
+  let currentLang = localStorage.getItem("lang") || "en";
+  if (!languages.includes(currentLang)) currentLang = "en";
+
   body.setAttribute("data-lang", currentLang);
-  toggleLabel.textContent = currentLang === "en" ? "EN" : "ID";
+  toggleLabel.textContent = labels[currentLang];
 
   langToggleBtn.addEventListener("click", () => {
-    const isEn = body.getAttribute("data-lang") === "en";
-    const newLang = isEn ? "id" : "en";
-    
+    const currentIndex = languages.indexOf(body.getAttribute("data-lang"));
+    const nextIndex = (currentIndex + 1) % languages.length;
+    const newLang = languages[nextIndex];
+
     body.setAttribute("data-lang", newLang);
     localStorage.setItem("lang", newLang);
-    
-    // Ubah teks tombolnya
-    toggleLabel.textContent = newLang === "en" ? "EN" : "ID";
+    toggleLabel.textContent = labels[newLang];
   });
 });
