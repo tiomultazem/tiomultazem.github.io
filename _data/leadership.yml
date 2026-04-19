@@ -1,0 +1,83 @@
+# PILIHAN 1: Dijadikan individual (satu-satu) - Saat ini yang ditampilkan di web
+items:
+  - role_en: "Imam & Substitute Imam"
+    role_id: "Imam & Imam Pengganti"
+    organization: "Masjid Al-Hasanah STIS & Masjid Al-Umm Tabalong"
+    period: "2024, 2025 - Present"
+    desc_en: "Served as the primary Imam at Masjid Al-Hasanah STIS (2024), previously as Muadzin (2023), and currently serving as a substitute Imam at Masjid Al-Umm Tabalong (2025-Present)."
+    desc_id: "Menjadi Imam utama di Masjid Al-Hasanah STIS (2024), sebelumnya sebagai Muadzin (2023), dan saat ini menjadi imam pengganti di Masjid Al-Umm Tabalong (2025-Sekarang)."
+
+  - role_en: "Islamic & Arabic Educator"
+    role_id: "Pengajar Tahsin, Tahfizh & Bahasa Arab"
+    organization: "Various Institutions & Private Mentoring"
+    period: "2019 - 2023"
+    desc_en: "Extensive teaching experience including Tahsin Mentor (Batch 63), Tahfizh Mentor (Batch 64 & 65 for 2 years), Arabic Grammar Teacher (Grade 8-9, 2019), and Private Quran/Arabic tutor."
+    desc_id: "Pengalaman mengajar komprehensif meliputi Mentor Tahsin (Angk. 63), Mentor Tahfizh (Angk. 64 & 65), Guru Grammar Bahasa Arab (Kelas 8-9, 2019), dan guru ngaji/bahasa Arab privat."
+
+  - role_en: "Youth Camp Mentor"
+    role_id: "Mentor Pesantren Kilat"
+    organization: "SD Fun Learning Bekasi & Jendela Jakarta"
+    period: "2022"
+    desc_en: "Mentored elementary students at SD Fun Learning Bekasi and participated as a mentor for the well-known Jendela Jakarta community youth camp."
+    desc_id: "Menjadi mentor untuk siswa SD Fun Learning Bekasi dan berpartisipasi sebagai mentor pesantren kilat di Jendela Jakarta (komunitas terkenal di Jakarta)."
+
+  - role_en: "Class President & Vice President"
+    role_id: "Ketua & Wakil Ketua Kelas"
+    organization: "Politeknik Statistika STIS"
+    period: "2020 - 2024"
+    desc_en: "Demonstrated consistent leadership by serving as Vice President (1KS4: 2020-2021, 4SI2: 2023-2024) and Class President (2KS2-3SI3: 2021-2023)."
+    desc_id: "Menunjukkan konsistensi kepemimpinan dengan menjabat sebagai Wakil Ketua Kelas (1KS4: 2020-2021, 4SI2: 2023-2024) dan Ketua Kelas (2KS2-3SI3: 2021-2023)."
+
+  - role_en: "Public Relations & Forestry Division"
+    role_id: "Humas & Divisi Gunung Hutan"
+    organization: "GPA Cheby (Nature Enthusiasts)"
+    period: "2021 - 2023"
+    desc_en: "Active member of GPA Cheby (STIS Nature Enthusiasts, inspired by the Chebyshev graph), serving both in Public Relations and the Mountain & Forest Division."
+    desc_id: "Anggota aktif Gerakan Pecinta Alam (GPA) Cheby STIS (dinamai dari grafik Chebyshev), bertugas di Hubungan Masyarakat dan Divisi Gunung & Hutan."
+
+  - role_en: "Main Instructor & Processing Coordinator"
+    role_id: "Instruktur Utama (Intama) & Koor Pengolahan"
+    organization: "PKL STIS"
+    period: "2022 - 2023"
+    desc_en: "Served as Processing Coordinator for Riset 1 PKL (2022-2023) and Main Instructor (Intama) managing field organizations (2023)."
+    desc_id: "Bertugas sebagai Koordinator Pengolahan Riset 1 PKL (2022-2023) dan Instruktur Utama (Intama) yang mengelola organisasi lapangan PKL (2023)."
+
+  - role_en: "Volunteer Electronics Repair (Kang Servis)"
+    role_id: "Relawan Reparasi Elektronik (KaeS / Kang Servis)"
+    organization: "Politeknik Statistika STIS"
+    period: "2022 - 2024"
+    desc_en: "Known as 'KaeS' (Kang Servis), providing 100% free repair services for electronic devices, phones, and laptops for STIS students."
+    desc_id: "Dikenal luas sebagai 'KaeS' (Kang Servis), memberikan layanan reparasi paruh waktu 100% gratis untuk perangkat elektronik, HP, dan laptop mahasiswa STIS."
+
+  - role_en: "Spotify Podcaster"
+    role_id: "Podcaster Spotify"
+    organization: "Personal Project"
+    period: "2019 - Present"
+    desc_en: "Host and creator of a podcast available on Spotify, running consistently since 2019."
+    desc_id: "Host dan kreator podcast di platform Spotify yang dijalankan secara konsisten sejak 2019."
+
+# ==========================================
+# PILIHAN 2: Jika mau digabung sangat ringkas
+# (Jika ingin menggunakan ini, ganti nama 'items_grouped' menjadi 'items' dan komentari yang atas)
+# ==========================================
+items_grouped:
+  - role_en: "Educator, Mentor & Religious Leader"
+    role_id: "Pendidik, Mentor & Tokoh Agama"
+    organization: "Various Institutions & Communities"
+    period: "2019 - Present"
+    desc_en: "Extensive background as an Imam (Masjid Al-Hasanah STIS, Masjid Al-Umm Tabalong), Tahsin/Tahfizh Mentor, Arabic Grammar Teacher, and Youth Camp Mentor (Jendela Jakarta)."
+    desc_id: "Berpengalaman komprehensif sebagai Imam (Masjid Al-Hasanah STIS, Masjid Al-Umm Tabalong), pembina Tahsin & Tahfizh, guru Bahasa Arab, dan mentor Pesantren Kilat (Jendela Jakarta)."
+
+  - role_en: "Organizational Leader & Volunteer"
+    role_id: "Pemimpin Organisasi & Relawan"
+    organization: "Politeknik Statistika STIS"
+    period: "2020 - 2024"
+    desc_en: "Consistent class leadership (President/VP), Core Roles in PKL STIS (Main Instructor & Processing Coordinator), Public Relations for GPA Cheby, and known as 'Kang Servis' providing free electronics repair for students."
+    desc_id: "Menjabat Ketua/Wakil Ketua Kelas selama 4 tahun, Instruktur Utama & Koor Pengolahan PKL, Humas GPA Cheby, serta dikenal sebagai 'Kang Servis' yang mereparasi elektronik mahasiswa 100% gratis."
+
+  - role_en: "Content Creator"
+    role_id: "Kreator Konten"
+    organization: "Spotify"
+    period: "2019 - Present"
+    desc_en: "Independent podcast creator."
+    desc_id: "Kreator podcast independen di platform Spotify."

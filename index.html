@@ -104,6 +104,54 @@ layout: default
   {% endfor %}
 </section>
 
+<section id="achievements" class="full">
+  <h2><span class="lang-en">Awards & Achievements</span><span class="lang-id">Penghargaan & Prestasi</span></h2>
+  <div class="grid-2">
+    {% for ach in site.data.achievements %}
+    <div class="item">
+      <h3>
+        <span class="lang-en">{{ ach.title_en }}</span>
+        <span class="lang-id">{{ ach.title_id }}</span>
+      </h3>
+      <p class="meta">{{ ach.year }}</p>
+      <p class="lang-en">{{ ach.desc_en }}</p>
+      <p class="lang-id">{{ ach.desc_id }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="certifications" class="full">
+  <h2><span class="lang-en">Certifications</span><span class="lang-id">Sertifikasi</span></h2>
+  <div class="grid-2">
+    {% for cert in site.data.certifications %}
+    <div class="item">
+      <h3>{{ cert.title }}</h3>
+      <p class="meta">{{ cert.issuer }}</p>
+      <p class="lang-en">{{ cert.desc_en }}</p>
+      <p class="lang-id">{{ cert.desc_id }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="leadership" class="full">
+  <h2><span class="lang-en">Leadership & Community</span><span class="lang-id">Kepemimpinan & Komunitas</span></h2>
+  <div class="timeline">
+    {% for role in site.data.leadership.items %}
+    <div class="item">
+      <h3>
+        <span class="lang-en">{{ role.role_en }}</span>
+        <span class="lang-id">{{ role.role_id }}</span>
+      </h3>
+      <p class="meta">{{ role.organization }} | {{ role.period }}</p>
+      <p class="lang-en">{{ role.desc_en }}</p>
+      <p class="lang-id">{{ role.desc_id }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="contact" class="full">
   <h2><span class="lang-en">Contact</span><span class="lang-id">Kontak</span></h2>
   <p class="meta"><em>
