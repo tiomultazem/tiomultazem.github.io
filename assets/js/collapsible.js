@@ -21,16 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   extraToggle.addEventListener("click", () => toggleExtra());
-
-  // Listen for hash changes (navbar clicks)
-  window.addEventListener("hashchange", () => {
-    if (window.location.hash === "#extra") {
-      toggleExtra(true);
-    }
-  });
-
-  // Initial check in case page loads with #extra hash
-  if (window.location.hash === "#extra") {
-    setTimeout(() => toggleExtra(true), 500);
-  }
 });
