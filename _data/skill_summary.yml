@@ -3,17 +3,27 @@
   skill_ar: "الخطابة العامة"
   level: 5
 
-- skill_en: "English"
-  skill_id: "Bahasa Inggris"
-  skill_ar: "اللغة الإنجليزية"
-  level: 4
-
-- skill_en: "Arabic"
+- skill_en: "Arabic Language"
   skill_id: "Bahasa Arab"
   skill_ar: "اللغة العربية"
   level: 5
 
-- skill_en: "AI-Accelerated Development"
-  skill_id: "Efisiensi Berbasis AI"
-  skill_ar: "التطوير المسرع بالذكاء الاصطناعي"
+- skill_en: "English Language"
+  skill_id: "Bahasa Inggris"
+  skill_ar: "اللغة الإنجليزية"
+  level: 4
+
+- skill_en: "AI Engineering"
+  skill_id: "AI Engineering"
+  skill_ar: "هندسة الذكاء"
   level: 5
+
+- skill_en: "Workflow Automation"
+  skill_id: "Otomatisasi Kinerja"
+  skill_ar: "أتمتة العمل"
+  level: 5
+
+- skill_en: "Content Creation"
+  skill_id: "Kreator Konten"
+  skill_ar: "صناعة المحتوى"
+  level: 4
