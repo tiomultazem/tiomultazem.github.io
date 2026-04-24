@@ -20,7 +20,7 @@
   url: "https://github.com/tiomultazem/evalssn-helper"
   stack_en: "Codeigniter 4, MySQL"
   stack_id: "Codeigniter 4, MySQL"
-  stack_ar: "كودإنيغايتر 4، ماي إس كيو إل"
+  stack_ar: "كودإغنايتر 4، ماي إس كيو إل"
   desc_en: "Intranet web application for evaluating SSN anomalies via local municipal servers to streamline validation workflows."
   desc_id: "Aplikasi web intranet untuk evaluasi anomali SSN melalui server lokal kabupaten/kota guna mempercepat proses validasi."
   desc_ar: "تطبيق ويب داخلي لتقييم حالات شذوذ رقم الضمان الاجتماعي (SSN) عبر خوادم البلدية المحلية لتبسيط سير عمل التحقق."
