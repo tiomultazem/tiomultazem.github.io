@@ -15,12 +15,12 @@
 
 - skill_en: "AI Engineering"
   skill_id: "AI Engineering"
-  skill_ar: "هندسة الذكاء"
+  skill_ar: "هندسة الذكاء الاصطناعي"
   level: 5
 
 - skill_en: "Workflow Automation"
   skill_id: "Otomatisasi Kinerja"
-  skill_ar: "أتمتة العمل"
+  skill_ar: "أتمتة سير العمل"
   level: 5
 
 - skill_en: "Content Creation"
